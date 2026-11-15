@@ -1,0 +1,26 @@
+:root {
+  /* Brand colors */
+  --color-primary: #C92071;
+  --color-secondary: #B5B6F2;
+  --color-tertiary: #991956;
+
+  /* Feedback colors */
+  --color-error: #EE4266;
+  --color-success: #52CA76;
+  --color-warning: #F6AA1C;
+
+  /* Grayscale */
+  --color-dark-gray: #1F1F1F;
+  --color-dark-gray-2: #474747;
+  --color-dark-gray-3: #666666;
+  --color-light-gray: #8F8F8F;
+  --color-light-gray-2: #CCCCCC;
+  --color-light-gray-3: #F5F5F5;
+  --color-white: #FFFFFF;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+
+  /* Layout */
+  --container-max-width: 1440px;
+}

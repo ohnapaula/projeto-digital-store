@@ -2,10 +2,11 @@ import { describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-describe('App bootstrap', () => {
-  it('renders initial application root', () => {
+describe('App component', () => {
+  it('renders application with layout and header', () => {
     render(<App />);
-    expect(screen.getByTestId('app-root')).toBeInTheDocument();
-    expect(screen.getByText('Digital Store')).toBeInTheDocument();
+    expect(screen.getByRole('banner')).toBeInTheDocument();
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument();
+    expect(screen.getByText('Página Inicial')).toBeInTheDocument();
   });
 });
