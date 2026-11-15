@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import HomePage from './pages/HomePage';
+import ProductListingPage from './pages/ProductListingPage';
 import DemoPage from './pages/DemoPage';
 
 export const AppContent: React.FC = () => {
@@ -9,14 +10,8 @@ export const AppContent: React.FC = () => {
     <Layout>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route
-          path="/products"
-          element={<DemoPage title="Listagem de Produtos" description="Catálogo completo de calçados e acessórios." />}
-        />
-        <Route
-          path="/produtos"
-          element={<Navigate to="/products" replace />}
-        />
+        <Route path="/products" element={<ProductListingPage />} />
+        <Route path="/produtos" element={<ProductListingPage />} />
         <Route
           path="/product/:id"
           element={<DemoPage title="Visualização do Produto" description="Detalhes e opções de compra." />}

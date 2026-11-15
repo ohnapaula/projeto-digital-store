@@ -1,0 +1,140 @@
+.page {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 40px 32px 64px;
+  width: 100%;
+}
+
+.layout {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+
+.sidebar {
+  width: 308px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sortBox {
+  width: 308px;
+  height: 60px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-gray-2);
+  border-radius: 4px;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sortLabel {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+  white-space: nowrap;
+}
+
+.sortSelect {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-dark-gray-2);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  outline: none;
+}
+
+.filterCard {
+  width: 308px;
+  background-color: var(--color-white);
+  border-radius: 4px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.filterHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.filterTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+}
+
+.clearFiltersButton {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.clearFiltersButton:hover {
+  text-decoration: underline;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background-color: var(--color-light-gray-2);
+  margin: 0 0 20px;
+}
+
+.content {
+  flex: 1;
+  min-width: 0;
+}
+
+.mobileFilterToggle {
+  display: none;
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-light-gray-2);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+  .page {
+    padding: 24px 16px 48px;
+  }
+
+  .layout {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mobileFilterToggle {
+    display: flex;
+  }
+
+  .sidebar {
+    width: 100%;
+    display: none;
+  }
+
+  .sidebarOpen {
+    display: flex;
+  }
+
+  .sortBox,
+  .filterCard {
+    width: 100%;
+  }
+}
