@@ -1,0 +1,154 @@
+.buyBox {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 520px;
+  width: 100%;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.name {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+  line-height: 1.25;
+}
+
+.reference {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-dark-gray-3);
+  letter-spacing: 0.5px;
+}
+
+.ratingRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.starsBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-warning);
+  color: var(--color-white);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.starIcon {
+  width: 14px;
+  height: 14px;
+}
+
+.ratingCount {
+  font-size: 14px;
+  color: var(--color-light-gray);
+}
+
+.priceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 8px 0;
+}
+
+.priceDiscount {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+}
+
+.priceOriginalStrikethrough {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--color-light-gray-2);
+  text-decoration: line-through;
+}
+
+.priceSingle {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-dark-gray-2);
+}
+
+.descriptionSection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.descriptionLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-light-gray);
+}
+
+.description {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-dark-gray-2);
+}
+
+.childrenArea {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buyButton {
+  margin-top: 16px;
+  width: 100%;
+  max-width: 280px;
+  height: 48px;
+  background-color: var(--color-warning);
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.buyButton:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.demoToast {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background-color: #E8F5E9;
+  border-left: 4px solid var(--color-success);
+  color: #2E7D32;
+  font-size: 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  .name {
+    font-size: 24px;
+  }
+
+  .priceDiscount,
+  .priceSingle {
+    font-size: 26px;
+  }
+
+  .buyButton {
+    max-width: 100%;
+  }
+}
