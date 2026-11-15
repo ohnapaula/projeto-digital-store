@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './pages/Layout';
 import HomePage from './pages/HomePage';
 import ProductListingPage from './pages/ProductListingPage';
+import ProductViewPage from './pages/ProductViewPage';
 import DemoPage from './pages/DemoPage';
 
 export const AppContent: React.FC = () => {
@@ -12,10 +13,7 @@ export const AppContent: React.FC = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/products" element={<ProductListingPage />} />
         <Route path="/produtos" element={<ProductListingPage />} />
-        <Route
-          path="/product/:id"
-          element={<DemoPage title="Visualização do Produto" description="Detalhes e opções de compra." />}
-        />
+        <Route path="/product/:id" element={<ProductViewPage />} />
         <Route
           path="/categorias"
           element={<DemoPage title="Categorias" description="Explore todas as categorias de calçados, camisetas e bonés." />}
