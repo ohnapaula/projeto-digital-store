@@ -615,3 +615,66 @@ Dentro do componente `<Section />` deve ser passado como filho o componente `<Pr
 </details>
 </details>
 
+---
+
+# 8 - Guia de Execução e Verificação do Projeto
+
+Esta aplicação foi desenvolvida em **React 18 + TypeScript + Vite**, atendendo integralmente aos requisitos visuais e funcionais especificados neste documento.
+
+## 8.1 - Pré-requisitos
+- **Node.js**: v18+ (testado e homologado em Node v24.18.0)
+- **npm**: v9+ (testado e homologado em npm v11.16.0)
+
+## 8.2 - Instalação de dependências
+```bash
+npm install
+```
+
+## 8.3 - Scripts disponíveis
+- `npm run dev`: Inicia o servidor de desenvolvimento local no Vite (porta padrão `5173`).
+- `npm run build`: Valida tipagem (`tsc`) e compila o bundle de produção otimizado em `dist/`.
+- `npm run preview`: Executa localmente o bundle gerado na pasta `dist/`.
+- `npm run test`: Executa a suíte de testes unitários e de integração com Vitest e Testing Library.
+- `npm run typecheck`: Valida a tipagem de todo o projeto TypeScript (`tsc --noEmit`).
+- `npm run lint`: Executa a verificação estática de código com ESLint.
+
+## 8.4 - Rotas implementadas
+- `/`: **HomePage** — Banners rotativos (8 slides), seção "Coleções em destaque" com 3 cards e "Produtos em alta" com 8 cards.
+- `/products`: **ProductListingPage** — Listagem completa com ordenação dinâmica por menor/maior preço (`priceDiscount ?? price`), barra lateral com 4 grupos de filtros (Marca, Categoria, Gênero, Estado) e totalização em tempo real.
+- `/produtos`: Alias compatível para `/products` (preserva query strings como `?filter=...`).
+- `/product/:id`: **ProductViewPage** — Visualização detalhada do calçado/produto com galeria de miniaturas interativas, BuyBox com metadados, seleção de tamanho e cor, CTA demonstrativo e seção de produtos recomendados.
+- `/categorias`, `/meus-pedidos`, `/cadastro`, `/login`: Telas demonstrativas com navegação e retorno para a Home.
+- `*`: Página 404 amigável com redirecionamento para o catálogo.
+
+## 8.5 - Estrutura de pastas implementada
+```
+├── assets/                     # SVGs originais da marca e ícones
+├── public/                     # Imagens estáticas (banners, produtos, coleções)
+├── src/
+│   ├── components/             # Componentes reutilizáveis
+│   │   ├── BuyBox/             # Caixa de compra com metadados e CTA
+│   │   ├── FilterGroup/        # Grupo de inputs de filtro (checkbox/radio)
+│   │   ├── Footer/             # Rodapé com informações e redes sociais
+│   │   ├── Gallery/            # Galeria carrossel com suporte a miniaturas
+│   │   ├── Header/             # Cabeçalho com busca, navegação e carrinho
+│   │   ├── Logo/               # Logomarca com variações header/footer
+│   │   ├── ProductCard/        # Card de produto com preços e descontos
+│   │   ├── ProductListing/     # Grid responsivo de produtos
+│   │   ├── ProductOptions/     # Seletores de tamanho (square) e cor (circle)
+│   │   └── Section/            # Container padrão de seção com título e link
+│   ├── data/                   # Catálogo de produtos mock tipado
+│   ├── pages/                  # Telas da aplicação e Layout
+│   │   ├── HomePage/           # Tela inicial
+│   │   ├── ProductListingPage/ # Tela de listagem e filtros
+│   │   ├── ProductViewPage/    # Tela de detalhes do produto
+│   │   ├── Layout.tsx          # Layout compartilhado (Header + Main + Footer)
+│   │   └── DemoPage.tsx        # Fallback para rotas demonstrativas
+│   ├── styles/                 # Tokens e estilos globais
+│   │   ├── tokens.css          # Design tokens (cores primárias, grayscale, etc.)
+│   │   └── index.css           # Reset CSS e estilos base
+│   ├── utils/                  # Utilitários (formatação monetária BRL)
+│   ├── test/                   # Configuração e testes de integração e regressão
+│   ├── App.tsx                 # Configuração de rotas da aplicação
+│   └── main.tsx                # Ponto de entrada React DOM
+```
+
