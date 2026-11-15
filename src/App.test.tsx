@@ -7,6 +7,6 @@ describe('App component', () => {
     render(<App />);
     expect(screen.getByRole('banner')).toBeInTheDocument();
     expect(screen.getByRole('contentinfo')).toBeInTheDocument();
-    expect(screen.getByText('Página Inicial')).toBeInTheDocument();
+    expect(screen.getByTestId('home-page')).toBeInTheDocument();
   });
 });

@@ -1,16 +1,14 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './pages/Layout';
+import HomePage from './pages/HomePage';
 import DemoPage from './pages/DemoPage';
 
 export const AppContent: React.FC = () => {
   return (
     <Layout>
       <Routes>
-        <Route
-          path="/"
-          element={<DemoPage title="Página Inicial" description="Bem-vindo à Drip Store!" />}
-        />
+        <Route path="/" element={<HomePage />} />
         <Route
           path="/products"
           element={<DemoPage title="Listagem de Produtos" description="Catálogo completo de calçados e acessórios." />}

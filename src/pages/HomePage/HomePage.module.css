@@ -1,0 +1,138 @@
+.homePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.gallerySection {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--color-light-gray-3);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 32px 48px;
+  width: 100%;
+}
+
+.collectionsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+.collectionCard {
+  position: relative;
+  height: 256px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px;
+  background-color: #D8E3F2;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.collectionCard:nth-child(2) {
+  background-color: #F8E5D3;
+}
+
+.collectionCard:nth-child(3) {
+  background-color: #E2E3FF;
+}
+
+.collectionCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.collectionContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  z-index: 2;
+  max-width: 180px;
+}
+
+.collectionBadge {
+  background-color: #E7FF86;
+  color: var(--color-dark-gray-2);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+
+.collectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-dark-gray);
+  line-height: 1.25;
+}
+
+.collectionButton {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.collectionCard:hover .collectionButton {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.collectionImageWrapper {
+  position: absolute;
+  right: -10px;
+  bottom: 0;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  pointer-events: none;
+}
+
+.collectionImage {
+  max-height: 90%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 960px) {
+  .collectionsGrid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .collectionCard {
+    height: 200px;
+    padding: 24px;
+  }
+
+  .collectionTitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px 32px;
+  }
+}
