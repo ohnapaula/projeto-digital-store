@@ -2,8 +2,6 @@
 
 Loja digital demonstrativa desenvolvida com React, TypeScript e Vite.
 
-Aplicação publicada: [acessar a Drip Store na Vercel](https://projeto-digital-store-fy8fivt9z-ohnapaulas-projects.vercel.app/product/1).
-
 ## Pré-requisitos
 
 - Execução local: Node.js 18+ e npm 9+.
